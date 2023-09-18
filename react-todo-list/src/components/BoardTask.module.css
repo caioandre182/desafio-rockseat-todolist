@@ -1,0 +1,66 @@
+.div {
+    width: 736px;
+    margin: auto;
+    margin-top: 91px;
+    display: flex;
+}
+
+.headerTask {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    width: 150px;
+}
+
+.taskCreated {
+    color: var(--blue);
+}
+
+.headerTask span {
+    background-color: var(--gray-400);
+    padding: 0 0.4rem;
+    border-radius: 10px;
+}
+
+.headerCompleted {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    width: 586px;
+}
+
+.headerCompleted span {
+    background-color: var(--gray-400);
+    padding: 0 0.4rem;
+    border-radius: 10px;
+}
+
+.taskCompleted {
+    color: var(--purple)
+}
+
+.emptyBoard {
+    width: 736px;
+    height: 244px;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-top: 1px solid var(--gray-400);
+
+}
+
+.alignDiv {
+    display: block;
+
+}
+
+.divImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
