@@ -1,15 +1,54 @@
 import './global.css';
 
 import { Header } from './components/Header';
-import { NewTask } from './components/NewTask';
-import { BoardTask } from './components/BoardTask';
+import { Task } from './components/Task';
+import { useState } from 'react';
+
+export interface ITask {
+    id: string,
+    title: string;
+    isCompleted: boolean
+}
 
 export function App(){
+    const [tasks, setTasks] = useState<ITask[]>([]);
+
+    function addTasks(taskTitle: string) {
+        setTasks([
+            ...tasks,
+            {
+                id: crypto.randomUUID(),
+                title: taskTitle,
+                isCompleted: false
+            }
+        ])
+    }
+
+    function deleteTaskById(taskId: string) {
+        const newTasks = tasks.filter((task) => task.id !== taskId);
+
+        setTasks(newTasks);
+
+    }
+
+    function toggleTaskCompleteById(taskId: string) {
+        const newTasks = tasks.map(task => {
+            if(task.id === taskId){
+                return {
+                    ...task,
+                    isCompleted: !task.isCompleted,
+                };
+            }
+            return task;
+        })
+
+        setTasks(newTasks);
+    }
+
     return (
         <div>
-            <Header />
-            <NewTask />
-            <BoardTask />
+            <Header onAddTask={addTasks}/>
+            <Task tasks={tasks} onDelete={deleteTaskById} onComplete={toggleTaskCompleteById} />
         </div>
     )
 }

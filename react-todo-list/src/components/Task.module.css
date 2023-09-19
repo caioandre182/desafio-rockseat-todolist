@@ -1,0 +1,72 @@
+.tasks {
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    margin-top: 5.625rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header p {
+    color: var(--blue);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+header p.textPurple {
+    color: var(--purple);
+}
+
+.header span {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.emptyBoard {
+    width: 46rem;
+    height: 15.25rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-top: 1px solid var(--gray-400);
+}
+
+.alignDiv {
+    display: block;
+
+}
+
+.divImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.textEditor p {
+    color: var(--gray-300);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
